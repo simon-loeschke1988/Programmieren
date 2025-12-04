@@ -12,7 +12,7 @@ class Shape(ABC):
         return f"{self.name}"
     
 class Rectangle(Shape):
-    def __init__(self, height, width ,name="Rectangle"):
+    def __init__(self, height, width ,name="blobb"):
         super().__init__(name)
         self.height= height
         self.width= width
