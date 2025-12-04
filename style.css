@@ -1,0 +1,92 @@
+/* Grundlegendes Styling mit modernem Farbgradienten */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* Container für mehrere Boxen */
+.box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+/* Einzelne Box mit intensivem Glas-Effekt */
+.box {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 1.5em;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  /* Modern wirkender Schlagschatten */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(31, 38, 135, 0.5);
+  background-color: aqua;
+  color: brown;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.box2 {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 1.5em;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  /* Animations-Effekt, der die Box kontinuierlich verschiebt */
+  animation: shiftPosition 30s ease-in-out infinite;
+}
+
+.box2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(31, 38, 135, 0.5);
+  background-color: aqua;
+  color: brown;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+/* Keyframes für den kontinuierlichen Verschiebe-Effekt */
+@keyframes shiftPosition {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(5px, 5px);
+    color: chartreuse;
+  }
+  50% {
+    transform: translate(15px, 15px);
+  }
+
+  80% {
+    transform: translate(5px, 5px);
+    color: red;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Ab einer Breite von 768px werden die Boxen nebeneinander angeordnet */
+@media screen and (min-width: 768px) {
+  .box-container {
+    flex-direction: row;
+  }
+}
