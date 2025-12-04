@@ -29,7 +29,7 @@ class Circle(Shape):
         return math.floor(math.pi * (self.r**2))
 
 class Triangle(Shape):
-    def __init__(self, height, base,name="Triangle"):
+    def __init__(self, height, base,name="Triandgle"):
         super().__init__(name)
         self.h= height
         self.b= base
